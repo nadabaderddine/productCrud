@@ -1,0 +1,14 @@
+.cats {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+
+.imgStyle {
+    width: 200px;
+    height: 200px;
+}

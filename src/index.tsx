@@ -3,15 +3,41 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter,Routes, Route } from "react-router";
+import Deuxiemepage from './deuxiemepage';
+import Products from './components/Products/Products';
+import Home from './components/Home/Home';
+import Cats from './components/Cats/Cats';
+import CatDetail from './components/Cats/CatDetail';
+const root = document.getElementById("root");
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+ReactDOM.createRoot(root as any).render(
+
+   <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} /> 
+      <Route path="/products" element={<Products />} /> 
+      <Route path="/deuxiemepage" element={<Deuxiemepage />} />
+      <Route path="/cats" element ={<Cats/>} />
+      <Route path="/cats/:id"   element ={<CatDetail/>} />
+    </Routes>
+  </BrowserRouter>,
+ 
 );
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+
+
+// const root = ReactDOM.createRoot(
+//   document.getElementById('root') as HTMLElement
+// );
+
+
+
+// root.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+// );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

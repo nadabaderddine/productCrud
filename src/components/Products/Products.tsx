@@ -4,6 +4,7 @@ import { Product, ProductType } from "../../types/productTypes"
 import ProductInput from "../ProductInput/ProductInput"
 import { Modal } from 'antd';
 import Form from "../ProductForm/Form"
+import Header from "../Header/Header";
 export default function Products() {
     const [products, setProducts] = useState<Product[]>([])
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -47,7 +48,8 @@ export default function Products() {
     console.log("product parent", products)
     return (
         <>
-            <p>nada product</p>
+           
+            <Header/>
             <Form type="Add" products={products} setProducts={setProducts}
             //setProducts={(productsList: Product[]) => { setProducts(productsList) }} 
             />
