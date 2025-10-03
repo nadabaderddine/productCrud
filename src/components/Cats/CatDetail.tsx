@@ -1,4 +1,3 @@
-
 import { useParams } from "react-router"
 import { useEffect, useState } from "react";
 import './cats.css'
@@ -15,7 +14,7 @@ export default function CatDetail() {
             const fetchedData = await fetchCatById(params!.id!);
             setCatDetail(fetchedData);
         }
-        getData();
+     getData();
     }, [params?.id]);
 
     return (

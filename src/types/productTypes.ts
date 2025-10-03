@@ -1,18 +1,26 @@
 export type Product = {
-    name: string
+    id?: number
+    name?: string
     price?: number
-    type: ProductType
+    type?: ProductType
 }
 
 export enum ProductType {
-    "Fashion" = "Fashion",
-    "Grocery" = "Grocery",
+    "fashion" = "fashion",
+    "grocery" = "grocery",
 }
 
-export type CatsType = { 
-    id : string
-    url : string
+export type CatsType = {
+    id: string
+    url: string
     width: number
-    height : number
-    
+    height: number
+
+}
+
+export type createProductDto = {
+
+    name?: string
+    price?: number
+    type?: ProductType
 }

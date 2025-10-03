@@ -7,13 +7,6 @@ import { fetchAllCats } from "../../services/catsServices"
 export default function Cats() {
     let navigate = useNavigate();
     const [cats, setCats] = useState<CatsType[]>()
-    // function fetchCats() {
-    //     axios.get('https://api.thecatapi.com/v1/images/search?limit=20').then(
-    //         response => {
-    //             setCats(response.data)
-    //         }
-    //     )
-    // }
     useEffect(() => {
         async function fetchCats() {
             const fetchedData = await fetchAllCats()

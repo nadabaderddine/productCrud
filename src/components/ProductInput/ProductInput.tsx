@@ -1,4 +1,3 @@
-
 type Inputitem = {
     label: string
     name: string
@@ -7,6 +6,8 @@ type Inputitem = {
     disabled? : boolean
     onChange?: (newValue: string) => void;
 }
+
+
 export default function ProductInput({ label, name, value, onChange,type,disabled }: Inputitem) {
     return(
   <label>
